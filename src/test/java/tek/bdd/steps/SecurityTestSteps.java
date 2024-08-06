@@ -17,7 +17,7 @@ public class SecurityTestSteps extends SeleniumUtility {
 
     @Then("validate user is in sign in page")
     public void validate_user_is_in_sign_in_page() {
-       String pageSubTitle = getElementText(SignInPage.PAGE_SUBTITLE);
+        String pageSubTitle = getElementText(SignInPage.PAGE_SUBTITLE);
         Assert.assertEquals("Sign in", pageSubTitle);
     }
 
@@ -30,9 +30,9 @@ public class SecurityTestSteps extends SeleniumUtility {
 
     @When("user enter {string} and {string} and click on login")
     public void userEnterUsernameAndPassword(String username, String password) {
-       sendText(SignInPage.EMAIL_INPUT, username);
-       sendText(SignInPage.PASSWORD_INPUT, password);
-       clickOnElement(SignInPage.LOGIN_BUTTON);
+        sendText(SignInPage.EMAIL_INPUT, username);
+        sendText(SignInPage.PASSWORD_INPUT, password);
+        clickOnElement(SignInPage.LOGIN_BUTTON);
     }
 
     @Then("user should be able to see account link")
@@ -43,8 +43,8 @@ public class SecurityTestSteps extends SeleniumUtility {
 
     @Then("user should see error {string}")
     public void userShouldSeeError(String expectedErrorMessage) {
-       String actualErrorMessage = getElementText(SignInPage.ERROR_MESSAGE);
+        String actualErrorMessage = getElementText(SignInPage.ERROR_MESSAGE);
 
-       Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
+        Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
     }
 }
