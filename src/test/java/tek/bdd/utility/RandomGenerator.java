@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class RandomGenerator {
 
-
     public static String generateRandomEmail() {
         String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         Random random = new Random();
