@@ -12,7 +12,7 @@ Feature: Create new account functionality
   Scenario: Using a Map as Data Table
     When user enter new account info
       | name     | Saqib     |
-      | email    | random       |
+      | email    | random    |
       | password | Saqib@123 |
     When user click on "Sign Up" button
     Then validate user is in account page
